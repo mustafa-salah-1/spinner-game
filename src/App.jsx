@@ -152,10 +152,7 @@ function AppContent() {
         <div className="text-center flex-1 sm:flex-initial">
           <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">
             🎡 Spinner Game
-          </h1>
-          <p className="text-[var(--text-muted)] mt-1 text-sm sm:text-base hidden sm:block">
-            Click the wheel or press Ctrl+Enter to spin!
-          </p>
+          </h1> 
         </div>
         <div className="flex-1 flex justify-end">
           <ThemeToggle />
