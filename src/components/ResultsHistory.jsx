@@ -6,12 +6,11 @@ function formatTime(isoString) {
 export function ResultsHistory({ results, onClear }) {
   if (results.length === 0) {
     return (
-      <div className="w-full lg:max-w-xs bg-[var(--bg-secondary)] rounded-2xl p-3 sm:p-4 border border-[var(--border-color)]">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
-          Results{" "}
-          <span className="text-[var(--text-muted)] font-normal">(0)</span>
+      <div className="w-full lg:max-w-xs bg-(--bg-secondary) rounded-2xl p-3 sm:p-4 border border-(--border-color)">
+        <h2 className="text-lg font-semibold text-(--text-primary) mb-4">
+          Results <span className="text-(--text-muted) font-normal">(0)</span>
         </h2>
-        <div className="text-center py-8 text-[var(--text-muted)]">
+        <div className="text-center py-8 text-(--text-muted)">
           <svg
             className="w-12 h-12 mx-auto mb-2 opacity-50"
             fill="none"
@@ -33,17 +32,17 @@ export function ResultsHistory({ results, onClear }) {
   }
 
   return (
-    <div className="w-full lg:max-w-xs bg-[var(--bg-secondary)] rounded-2xl p-3 sm:p-4 flex flex-col h-full border border-[var(--border-color)]">
+    <div className="w-full lg:max-w-xs bg-(--bg-secondary) rounded-2xl p-3 sm:p-4 flex flex-col h-full border border-(--border-color)">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+        <h2 className="text-lg font-semibold text-(--text-primary)">
           Results{" "}
-          <span className="text-[var(--text-muted)] font-normal">
+          <span className="text-(--text-muted) font-normal">
             ({results.length})
           </span>
         </h2>
         <button
           onClick={onClear}
-          className="text-sm text-[var(--text-muted)] hover:text-red-500 transition-colors"
+          className="text-sm text-(--text-muted) hover:text-red-500 transition-colors"
         >
           Clear
         </button>
@@ -53,19 +52,19 @@ export function ResultsHistory({ results, onClear }) {
         {results.map((result, index) => (
           <div
             key={result.id}
-            className="flex items-center gap-3 p-2 rounded-lg bg-[var(--card-bg)] border border-[var(--border-color)]"
+            className="flex items-center gap-3 p-2 rounded-lg bg-(--card-bg) border border-(--border-color)"
           >
-            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-muted)] text-xs font-medium">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-(--bg-tertiary) text-(--text-muted) text-xs font-medium">
               {results.length - index}
             </div>
             <div
-              className="w-3 h-3 rounded-full flex-shrink-0"
+              className="w-3 h-3 rounded-full shrink-0"
               style={{ backgroundColor: result.winner.color }}
             />
-            <span className="flex-1 text-sm font-medium text-[var(--text-primary)] truncate">
+            <span className="flex-1 text-sm font-medium text-(--text-primary) truncate">
               {result.winner.name}
             </span>
-            <span className="text-xs text-[var(--text-muted)]">
+            <span className="text-xs text-(--text-muted)">
               {formatTime(result.timestamp)}
             </span>
           </div>
