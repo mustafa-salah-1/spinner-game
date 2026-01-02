@@ -8,14 +8,14 @@ import { ParticlesBackground } from "./components/ParticlesBackground";
 
 function SettingsPanel({ settings, onUpdate }) {
   return (
-    <div className="bg-[var(--bg-secondary)] rounded-2xl p-3 sm:p-4 border border-[var(--border-color)]">
-      <h2 className="text-base sm:text-lg font-semibold text-[var(--text-primary)] mb-3 sm:mb-4">
+    <div className="bg-slate-800 rounded-2xl p-3 sm:p-4 border border-slate-700">
+      <h2 className="text-base sm:text-lg font-semibold text-slate-100 mb-3 sm:mb-4">
         Settings
       </h2>
 
       <div className="space-y-4">
         <div>
-          <label className="flex items-center justify-between text-sm text-[var(--text-secondary)]">
+          <label className="flex items-center justify-between text-sm text-slate-300">
             <span>Spin Duration</span>
             <span className="font-medium">{settings.spinDuration / 1000}s</span>
           </label>
@@ -37,9 +37,9 @@ function SettingsPanel({ settings, onUpdate }) {
             onChange={(e) =>
               onUpdate({ removeWinnerAfterSpin: e.target.checked })
             }
-            className="w-4 h-4 rounded border-[var(--border-color)] text-blue-600 focus:ring-blue-500"
+            className="w-4 h-4 rounded border-slate-700 text-blue-600 focus:ring-blue-500"
           />
-          <span className="text-sm text-[var(--text-secondary)]">
+          <span className="text-sm text-slate-300">
             Remove winner after spin
           </span>
         </label>
@@ -49,11 +49,9 @@ function SettingsPanel({ settings, onUpdate }) {
             type="checkbox"
             checked={settings.soundEnabled}
             onChange={(e) => onUpdate({ soundEnabled: e.target.checked })}
-            className="w-4 h-4 rounded border-[var(--border-color)] text-blue-600 focus:ring-blue-500"
+            className="w-4 h-4 rounded border-slate-700 text-blue-600 focus:ring-blue-500"
           />
-          <span className="text-sm text-[var(--text-secondary)]">
-            Sound effects
-          </span>
+          <span className="text-sm text-slate-300">Sound effects</span>
         </label>
       </div>
     </div>
