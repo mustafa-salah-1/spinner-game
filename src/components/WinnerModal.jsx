@@ -76,12 +76,12 @@ export function WinnerModal({ winner, onClose, onRemove }) {
       {showConfetti && <Confetti />}
 
       <div
-        className="relative bg-[var(--card-bg)] rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl animate-scaleIn border border-[var(--border-color)]"
+        className="relative rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl animate-scaleIn border "
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+          className="absolute top-4 right-4 p-2  transition-colors"
           aria-label="Close"
         >
           <svg
@@ -104,7 +104,7 @@ export function WinnerModal({ winner, onClose, onRemove }) {
             <span className="text-6xl">🎉</span>
           </div>
 
-          <h2 className="text-xl font-medium text-[var(--text-muted)] mb-2">
+          <h2 className="text-xl font-medium mb-2">
             Winner!
           </h2>
 
@@ -113,7 +113,7 @@ export function WinnerModal({ winner, onClose, onRemove }) {
               className="w-6 h-6 rounded-full shadow-md"
               style={{ backgroundColor: winner.color }}
             />
-            <p className="text-3xl font-bold text-[var(--text-primary)]">
+            <p className="text-3xl font-bold ">
               {winner.name}
             </p>
           </div>
